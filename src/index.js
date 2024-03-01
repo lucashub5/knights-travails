@@ -2,6 +2,25 @@ import Horse from './comp/chess-knight.svg';
 import { Node, Board } from './graphs.js';
 import './comp/style.css';
 
+const body = document.body;
+
+const htmlTemplate = `
+  <header><h1>Knights Travails</h1></header>
+  <main>
+    <div class="information">
+      <label for="bar" id="sizeLabel">Size: <span id="sizeValue">8x8</span></label>
+      <input type="range" id="bar" name="bar" min="8" max="25" value="8">
+
+      <a id="guide-user">Select a position for the knight.</a>
+      <button id="btn">Restart</button>
+    </div>
+    <div class="output"></div>
+  </main>
+  <footer>By Lucas Carovano</footer>
+`;
+
+body.innerHTML = htmlTemplate;
+
 const output = document.querySelector('.output');
 const sizeInput = document.getElementById('bar');
 const sizeLabel = document.getElementById('sizeLabel');
