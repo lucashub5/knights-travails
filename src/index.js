@@ -1,5 +1,6 @@
 import Horse from './comp/chess-knight.svg';
 import { Node, Board } from './graphs.js'
+import './comp/style.css'
 
 const output = document.querySelector('.output');
 const sizeInput = document.getElementById('bar');
